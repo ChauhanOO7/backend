@@ -2,7 +2,7 @@ const express = require('express');
 const scrapeTwitterTrends = require('./selenium-script');
 const cors=require("cors");
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.use(express.static('../frontend'));
 app.use(cors());
